@@ -5,38 +5,36 @@
 				<h2>Data Konsumen</h2>
 			</div>
 			<div id="content-main">
-				<a href="<?php echo base_url() ?>konsumen" class="button">Kembali</a>
-				<br/>
-				<br/>
 				<form class="form-container">
 					<div class="form-group">
 						<label for="id_konsumen" class="form-label">ID Konsumen</label>
-						<input type="text" name="id_konsumen" placeholder="Id Konsumen" class="form-content"/>
+						<label for="id_konsumen" class="form-label">: ID Konsumen</label>
 					</div>
 					<div class="form-group">
 						<label for="id_konsumen" class="form-label">Tanggal</label>
-						<input type="text" name="id_konsumen" placeholder="Id Konsumen" class="form-content"/>
+						<label for="id_konsumen" class="form-label">: Tanggal</label>
 					</div>
 					<div class="form-group">
 						<label for="id_konsumen" class="form-label">Nama</label>
-						<input type="text" name="id_konsumen" placeholder="Nama" class="form-content"/>
+						<label for="id_konsumen" class="form-label">: Nama</label>
 					</div>
 					<div class="form-group">
 						<label for="id_konsumen" class="form-label">No HP</label>
-						<input type="text" name="id_konsumen" placeholder="No Handphone" class="form-content"/>
+						<label for="id_konsumen" class="form-label">: No HP</label>
 					</div>
 					<div class="form-group">
 						<label for="id_konsumen" class="form-label">Perusahaan</label>
-						<input type="text" name="id_konsumen" placeholder="Perusahaan" class="form-content"/>
+						<label for="id_konsumen" class="form-label">: Perusahaan</label>
 					</div>
 					<div class="form-group">
 						<label for="id_konsumen" class="form-label">Alamat</label>
-						<textarea class="form-content"></textarea>
+						<label for="id_konsumen" class="form-label">: Alamat</label>
 					</div>
 					<div class="form-group">
 						<div class="form-label"></div>
-						<input type="submit" name="sbmt_konsumen" value="Simpan" class="button form-content">
-					</div>
+						<input type="submit" name="sbmt_konsumen" value="Hapus" class="button form-content">
+						<a href="<?php echo base_url() ?>konsumen">Kembali</a>
+					</div>	
 				</form>
 			</div>
 		</div>

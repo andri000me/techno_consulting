@@ -6,7 +6,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="<?php echo base_url("style/css/custom.css"); ?>" />
-	<link rel="stylesheet" href="<?php echo base_url("style/css/bootstrap.css"); ?>" />
 </head>
 <body>
 	<div id="header">
@@ -33,7 +32,7 @@
 						</ul>
                     </li>
 					<li><a href="#">Pembayaran</a></li>
-                    <li><a href="#">Konsumen</a></li>
+                    <li><a href="<?php echo base_url()?>konsumen">Konsumen</a></li>
                     <li><a href="#">Data Master</a>
 						<ul class="nav-dropdown">
 							<li><a href="#">Kategori Proyek</a></li>
