@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 #header{
-	background-color: #2B333C;
+	background-color: #4052B6;
 	color: white;
 	position: absolute;
 	z-index: 1;
@@ -13,7 +13,7 @@
 }
 #nav{
 	position: absolute;
-	background-color: #495B6C;
+	background-color: white;
 	height: 100vh;	
 	width: 200px;
 }
@@ -21,36 +21,36 @@
 	margin-top: 55px;
 	margin-left: 5px;
 	width: 190px;
-	background-color: #495B6C;
+	background-color: white;
 	padding: 5px;
 }
 #nav-container-img{
 	background-color: grey;
 	padding: 5px;
 	height: 180px;
-	border: solid 1px white;
+	border: solid 0.5px #d2d2d2;
 }
 #nav-container-link{
-	background-color: #495B6C;
+	background-color: white;
 	padding: 5px;
 }
 #nav-container-link ul{
 	list-style: none;
 }
 #nav-container-link li{
-	padding: 5px;
-	background-color: #495B6C;
-	border-bottom: solid 1px #878787;
+	padding: 8px;
+	background-color: white;
+	border-bottom: solid 1px #4052B6;
 }
 #nav-container-link li:hover{
-	background-color: #3B4A57;
+	background-color: #D6DAF0;
 }
 #nav-container-link a{
 	text-decoration: none;
-	color:#A7B1C2;
+	color:#4052B6;
 }
 #nav-container-link a:hover{
-	color:white;
+	color:#303D88;
 }
 .nav-dropdown{
 	display: none;
@@ -62,7 +62,7 @@
 #content-container{
 	width: 100%;
 	height: 100vh;
-	background-color: #F9F9F9;
+	background-color: #EFEFEF;
 	padding-left: 205px;
 	padding-top: 55px;
 }
@@ -70,18 +70,20 @@
 	margin: 5px;
 	margin-right: 10px;
 	height: 70px;
-	border: solid 2px black;
+	border: solid 0.5px #d2d2d2;
 	padding-left:30px;
 	padding-top:20px;
+	background-color:white; 
 }
 #content-main{
 	margin: 5px;
 	margin-top: 10px;
 	margin-right: 10px;
 	height: 515px;
-	border: solid 2px black;
 	padding-left:30px;
 	padding-top:30px;
+	background-color:white; 
+	border: solid 0.5px #d2d2d2;
 }
 .form-group{
 	display:block;
@@ -99,21 +101,23 @@
 }
 .table-strip{
 	width:800px;
-	border:2px;
+	border-collapse: collapse;
 }
 th {
-	height:30px;
+	height:35px;
+	background: #4052B6;
+	color: white;
 }
 td{
-	height:35px;
+	height:30px;
 }
-
-tr:hover{
-	background-color:grey;
+tr:nth-child(odd){
+	background-color: #f4f4f4;
+}
+tr:nth-child(even){
+	background-color: #d2d2d2;
 }
 .table-headerrow-strip{
-	background-color: #3B4A57;
-	color: white;
 	border-bottom: 1px solid grey;
 }
 .table-row-strip{
@@ -125,7 +129,7 @@ tr:hover{
 
 .button{
 	padding:7px;
-	background-color:#495B6C;
+	background-color:#4052B6 ;
 	color:white;
 	border:none;
 	border-radius: 5px;
@@ -134,6 +138,14 @@ tr:hover{
 }
 
 .button:hover{
-	background-color: #3B4A57;
+	background-color: #303D88;
 	color:white;
+}
+textarea{
+	columns:150;
+	rows:5;
+}
+
+.line-separator{
+	border-bottom:0.5px solid #d2d2d2;
 }
