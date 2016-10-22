@@ -46,6 +46,20 @@ CREATE TABLE IF NOT EXISTS `tb_konsumen` (
 /*!40000 ALTER TABLE `tb_konsumen` ENABLE KEYS */;
 
 
+-- Dumping structure for table techno_db.tb_log_proyek
+CREATE TABLE IF NOT EXISTS `tb_log_proyek` (
+  `id_log` varchar(10) NOT NULL,
+  `waktu` datetime DEFAULT NULL,
+  `id_proyek` varchar(7) DEFAULT NULL,
+  `status` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id_log`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Dumping data for table techno_db.tb_log_proyek: ~0 rows (approximately)
+/*!40000 ALTER TABLE `tb_log_proyek` DISABLE KEYS */;
+/*!40000 ALTER TABLE `tb_log_proyek` ENABLE KEYS */;
+
+
 -- Dumping structure for table techno_db.tb_master_kategori_proyek
 CREATE TABLE IF NOT EXISTS `tb_master_kategori_proyek` (
   `id_kategori_proyek` varchar(8) NOT NULL,
@@ -128,10 +142,14 @@ CREATE TABLE IF NOT EXISTS `tb_pengeluaran` (
 CREATE TABLE IF NOT EXISTS `tb_proyek` (
   `id_proyek` varchar(7) NOT NULL,
   `tanggal_proyek` date NOT NULL,
+  `tanggal_jatuh_tempo` date DEFAULT NULL,
   `id_konsumen` varchar(8) NOT NULL,
   `id_kategori_proyek` varchar(8) NOT NULL,
   `id_servis` varchar(8) NOT NULL,
-  `note_konsumen` varchar(30) NOT NULL,
+  `status_proyek` varchar(10) DEFAULT NULL,
+  `keterangan` varchar(30) DEFAULT NULL,
+  `note_konsumen` varchar(30) DEFAULT NULL,
+  `note_deveoper` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id_proyek`),
   KEY `id_kategori_proyek` (`id_kategori_proyek`),
   KEY `id_konsumen_2` (`id_konsumen`),
@@ -158,21 +176,6 @@ CREATE TABLE IF NOT EXISTS `tb_proyek_kontrak` (
 -- Dumping data for table techno_db.tb_proyek_kontrak: ~0 rows (approximately)
 /*!40000 ALTER TABLE `tb_proyek_kontrak` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tb_proyek_kontrak` ENABLE KEYS */;
-
-
--- Dumping structure for table techno_db.tb_rincian_proyek
-CREATE TABLE IF NOT EXISTS `tb_rincian_proyek` (
-  `id_proyek` varchar(7) NOT NULL,
-  `tanggal_proyek` date NOT NULL,
-  `status_proyek` varchar(10) NOT NULL,
-  `keterangan` varchar(30) NOT NULL,
-  `note_developer` varchar(30) NOT NULL,
-  PRIMARY KEY (`id_proyek`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- Dumping data for table techno_db.tb_rincian_proyek: ~0 rows (approximately)
-/*!40000 ALTER TABLE `tb_rincian_proyek` DISABLE KEYS */;
-/*!40000 ALTER TABLE `tb_rincian_proyek` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
