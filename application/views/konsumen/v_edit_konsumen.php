@@ -15,10 +15,11 @@
 						$id_konsumen = $row['id_konsumen'];
 				?>
 				
-				<form>
+				<form method="post" action="<?php echo base_url()?>konsumen/editproses">
 					<div class="form-group">
 						<label for="id_konsumen" class="form-label">ID Konsumen</label>
-						<input type="text" name="id_konsumen" value="<?php echo $id_konsumen ?>" class="form-content"/>
+						<input type="text"  value="<?php echo $id_konsumen ?>" class="form-content" disabled="true" />
+						<input type="hidden" name="id_konsumen" value="<?php echo $id_konsumen ?>">
 					</div>
 					<div class="form-group">
 						<label for="tanggal" class="form-label">Tanggal</label>
@@ -42,7 +43,7 @@
 					</div>
 					<div class="form-group">
 						<div class="form-label"></div>
-						<input type="submit" name="sbmt_konsumen" value="Update" class="button">
+						<input type="submit" name="sbmt_konsumen" value="Update" class="button"> | 
 						<a href="<?php echo base_url() ?>konsumen">Kembali</a>
 					</div>
 				</form>

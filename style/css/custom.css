@@ -1,4 +1,5 @@
 *{
+	font-family: Monospace;
 	padding: 0px;
 	margin: 0px;
 	box-sizing: border-box;
@@ -82,6 +83,7 @@
 	height: 515px;
 	padding-left:30px;
 	padding-top:30px;
+	padding-right: 30px;
 	background-color:white; 
 	border: solid 0.5px #d2d2d2;
 }
@@ -105,7 +107,7 @@
 }
 th {
 	height:35px;
-	background: #4052B6;
+	background: #00BD9C;
 	color: white;
 }
 td{
@@ -128,18 +130,61 @@ tr:nth-child(even){
 }
 
 .button{
-	padding:7px;
-	background-color:#4052B6 ;
-	color:white;
+	padding:8px;
+	background-color:#2C97DE ;
 	border:none;
 	border-radius: 5px;
+	display: inline-block;
 	text-decoration: none;
-	height:30px;
 }
-
 .button:hover{
-	background-color: #303D88;
-	color:white;
+	background-color: #227FBB;
+}
+.button-save{
+	padding:8px;
+	background-color:#1FCE6D	 ;
+	border:none;
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+}
+.button-save:hover{
+	background-color: #1AAF5D;
+}
+.button-cancel{
+	padding:8px;
+	background-color:#F59D00;
+	border:none;
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+}
+.button-cancel:hover{
+	background-color: #F2C500;
+}
+.button-delete{
+	padding:8px;
+	background-color:#E94B35;
+	border:none;
+	border-radius: 5px;
+	display: inline-block;
+	text-decoration: none;
+}
+.button-delete:hover{
+	background-color: #C23824;
+}
+.button-icon{ 
+	z-index: 0;
+	position: absolute;
+}
+.button-label{
+	margin-top: 10px;
+	display: inline;
+	margin-left: 20px;
+	color: white;
+}
+.button-small{
+	padding: 5px;
 }
 textarea{
 	columns:150;
@@ -148,4 +193,10 @@ textarea{
 
 .line-separator{
 	border-bottom:0.5px solid #d2d2d2;
+}
+.notif-msg{
+	padding: 10px;
+	background-color: #DFF0D8;
+	color: #3C763D;
+	width: 500px;
 }

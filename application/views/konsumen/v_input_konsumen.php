@@ -5,13 +5,22 @@
 				<h2> Input Data Konsumen</h2>
 			</div>
 			<div id="content-main">
-				<a href="<?php echo base_url() ?>konsumen" class="button">Kembali</a><br/>
+				<a href="<?php echo base_url() ?>konsumen" class="button">
+					<span class="button-icon">
+						<img src="<?php echo base_url("style/icon/back.png"); ?>" width="16px" height="16px">  
+					</span>
+					<div class="button-label">
+						Kembali
+					</div>
+				</a>
+				<br/>
 				<br/>
 				<div class="line-separator"></div><br/>
-				<form class="form-container" method="post" action="inputproses">
+				<form class="form-container" method="post" action="<?php echo base_url()?>konsumen/inputproses">
 					<div class="form-group">
 						<label for="id_konsumen" class="form-label">ID Konsumen</label>
-						<input type="text" name="id_konsumen" placeholder="Id Konsumen" class="form-content"/>
+						<input type="text"  value="<?php echo $id_konsumen ?>" class="form-content" disabled="true" />
+						<input type="hidden" name="id_konsumen" value="<?php echo $id_konsumen ?>">
 					</div>
 					<div class="form-group">
 						<label for="tanggal" class="form-label">Tanggal</label>
@@ -35,8 +44,8 @@
 					</div>
 					<div class="form-group">
 						<div class="form-label"></div>
-						<input type="submit" name="sbmt_konsumen" value="Simpan" class="button form-content">
-						<a href="<?php echo base_url()?>konsumen">Kembali</a>
+						<input type="submit" name="sbmt_konsumen" value="Simpan" class="button-save form-content"> | 
+						<input type="reset" name="cancel" value="Batal" class="button-cancel form-content">
 					</div>
 				</form>
 			</div>

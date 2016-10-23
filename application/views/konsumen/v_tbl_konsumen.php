@@ -5,7 +5,15 @@
 				<h2>Data Konsumen</h2>
 			</div>
 			<div id="content-main">
-				<a href="<?php echo base_url() ?>konsumen/inputkonsumen" class="button">Buat Baru</a><br/>
+				<a href="<?php echo base_url() ?>konsumen/inputkonsumen" class="button">
+					<span class="button-icon">
+						<img src="<?php echo base_url("style/icon/add.png"); ?>" width="16px" height="16px">  
+					</span>
+					<div class="button-label">
+						Buat Baru
+					</div>
+				</a>
+				<br/>
 				<br/>
 				<div class="line-separator"></div><br/>
 				<table class="table-strip">
@@ -31,8 +39,25 @@
 							<td><?php echo $no_hp ?></td>
 							<td><?php echo $perusahaan ?></td>
 							<td>
-								<a href="<?php echo base_url() ?>konsumen/editkonsumen/<?php echo $id_konsumen?>" ?>Edit</a> | 
-								<a href="<?php echo base_url() ?>konsumen/hapuskonsumen/<?php echo $id_konsumen?>">Hapus</a>
+								<center>
+									<a href="<?php echo base_url() ?>konsumen/editkonsumen/<?php echo $id_konsumen?>" class="button-cancel button-small">
+										<span class="button-icon">
+											<img src="<?php echo base_url("style/icon/edit.png"); ?>" width="14px" height="14px">  
+										</span>
+										<div class="button-label">
+											Edit
+										</div>
+									</a>
+									|
+									<a href="<?php echo base_url() ?>konsumen/hapuskonsumen/<?php echo $id_konsumen?>" class="button-delete button-small">
+										<span class="button-icon">
+											<img src="<?php echo base_url("style/icon/delete.png"); ?>" width="14px" height="14px">  
+										</span>
+										<div class="button-label">
+											Edit
+										</div>
+									</a>
+								</center>
 							</td>
 						</tr>
 					<?php	

@@ -15,7 +15,7 @@
 						$id_konsumen = $row['id_konsumen'];
 				?>
 					<form class="form-container" method="post" action="<?php echo base_url()?>konsumen/hapusproses">
-						<input type="text" name="id" value="<?php echo $id_konsumen ?>">
+						<input type="hidden" name="id" value="<?php echo $id_konsumen ?>">
 						<div class="form-group">
 							<label for="id_konsumen" class="form-label">ID Konsumen</label>
 							<label for="id_konsumen" class="form-label">: <?php echo $id_konsumen ?></label>
@@ -42,7 +42,7 @@
 						</div>
 						<div class="form-group">
 							<div class="form-label"></div>
-							<input type="submit" name="sbmt_konsumen" value="Hapus" class="button form-content">
+							<input type="submit" name="sbmt_konsumen" value="Hapus" class="button form-content"> | 
 							<a href="<?php echo base_url() ?>konsumen">Kembali</a>
 						</div>	
 					</form>
