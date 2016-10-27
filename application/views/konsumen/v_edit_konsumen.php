@@ -39,12 +39,27 @@
 					</div>
 					<div class="form-group">
 						<label for="alamat" class="form-label">Alamat</label>
-						<textarea name="alamat" class="form-content"><?php echo $perusahaan ?></textarea>
+						<textarea name="alamat" class="form-content"><?php echo $alamat ?></textarea>
 					</div>
 					<div class="form-group">
 						<div class="form-label"></div>
-						<input type="submit" name="sbmt_konsumen" value="Update" class="button"> | 
-						<a href="<?php echo base_url() ?>konsumen">Kembali</a>
+						<button type="submit" class="button-save">
+							<span class="button-icon">
+								<img src="<?php echo base_url("style/icon/save.png"); ?>" width="16px" height="16px">  
+							</span>
+							<div class="button-label">
+								Update
+							</div>
+						</button>
+						| 
+						<a href="<?php echo base_url() ?>konsumen" class="button">
+							<span class="button-icon">
+								<img src="<?php echo base_url("style/icon/back.png"); ?>" width="16px" height="16px">  
+							</span>
+							<div class="button-label">
+								Kembali
+							</div>
+						</a>
 					</div>
 				</form>
 				<?php

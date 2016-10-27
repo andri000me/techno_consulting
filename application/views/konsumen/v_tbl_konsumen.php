@@ -54,7 +54,7 @@
 											<img src="<?php echo base_url("style/icon/delete.png"); ?>" width="14px" height="14px">  
 										</span>
 										<div class="button-label">
-											Edit
+											Hapus
 										</div>
 									</a>
 								</center>

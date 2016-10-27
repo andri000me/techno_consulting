@@ -42,8 +42,23 @@
 						</div>
 						<div class="form-group">
 							<div class="form-label"></div>
-							<input type="submit" name="sbmt_konsumen" value="Hapus" class="button form-content"> | 
-							<a href="<?php echo base_url() ?>konsumen">Kembali</a>
+							<button type="submit" class="button-delete">
+							<span class="button-icon">
+								<img src="<?php echo base_url("style/icon/delete.png"); ?>" width="16px" height="16px">  
+							</span>
+							<div class="button-label">
+								Hapus
+							</div>
+							</button>
+							| 
+							<a href="<?php echo base_url() ?>konsumen" class="button">
+								<span class="button-icon">
+									<img src="<?php echo base_url("style/icon/back.png"); ?>" width="16px" height="16px">  
+								</span>
+								<div class="button-label">
+									Kembali
+								</div>
+							</a>
 						</div>	
 					</form>
 				<?php

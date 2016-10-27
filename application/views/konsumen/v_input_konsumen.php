@@ -44,8 +44,23 @@
 					</div>
 					<div class="form-group">
 						<div class="form-label"></div>
-						<input type="submit" name="sbmt_konsumen" value="Simpan" class="button-save form-content"> | 
-						<input type="reset" name="cancel" value="Batal" class="button-cancel form-content">
+						<button type="submit" class="button-save">
+							<span class="button-icon">
+								<img src="<?php echo base_url("style/icon/save.png"); ?>" width="16px" height="16px">  
+							</span>
+							<div class="button-label">
+								Buat Baru
+							</div>
+						</button> 
+						|
+						<button type="reset" class="button-cancel">
+							<span class="button-icon">
+								<img src="<?php echo base_url("style/icon/cancel.png"); ?>" width="16px" height="16px">  
+							</span>
+							<div class="button-label">
+								Batal
+							</div>
+						</button> 
 					</div>
 				</form>
 			</div>
