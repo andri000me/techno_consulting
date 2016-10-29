@@ -52,7 +52,7 @@
 							<div class="button-label">
 								Simpan
 							</div>
-						</button> 
+						</button>
 						|
 						<button type="reset" class="button-cancel">
 							<span class="button-icon">
