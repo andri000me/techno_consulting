@@ -19,7 +19,7 @@
 			$this->load->model('konsumen_model');
 			$this->konsumen_model->insert_konsumen();
 			$data['pesan'] = "Data berhasil disimpan !";
-			$this->load->view('konsumen/v_redirect.php',$data);
+			$this->load->view('templates/v_redirect.php',$data);
 			header("Refresh:3;url=".base_url()."konsumen");
 
 		}
@@ -32,7 +32,7 @@
 			$this->load->model('konsumen_model');
 			$this->konsumen_model->update_konsumen();
 			$data['pesan'] = "Data berhasil diupdate !";
-			$this->load->view('konsumen/v_redirect.php',$data);
+			$this->load->view('templates/v_redirect.php',$data);
 			header("Refresh:3;url=".base_url()."konsumen");
 		}
 		function HapusKonsumen(){
@@ -49,7 +49,7 @@
 
 		function test(){
 			$data['pesan'] = "Data berhasil disimpan !";
-			$this->load->view('konsumen/v_redirect.php',$data);
+			$this->load->view('templates/v_redirect.php',$data);
 		}
 
     }

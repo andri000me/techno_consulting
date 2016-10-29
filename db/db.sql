@@ -19,14 +19,18 @@ USE `techno_db`;
 CREATE TABLE IF NOT EXISTS `tb_kas` (
   `id_kas` varchar(8) NOT NULL,
   `tanggal_transaksi` date DEFAULT NULL,
-  `jenis_transaksi` varchar(5) DEFAULT NULL,
+  `jenis_transaksi` varchar(2) DEFAULT NULL,
   `keterangan_transaksi` varchar(30) DEFAULT NULL,
   `nominal_transaksi` float DEFAULT NULL,
   PRIMARY KEY (`id_kas`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table techno_db.tb_kas: ~0 rows (approximately)
+-- Dumping data for table techno_db.tb_kas: ~3 rows (approximately)
 /*!40000 ALTER TABLE `tb_kas` DISABLE KEYS */;
+INSERT INTO `tb_kas` (`id_kas`, `tanggal_transaksi`, `jenis_transaksi`, `keterangan_transaksi`, `nominal_transaksi`) VALUES
+	('001', '2016-10-29', 'DB', 'Beli Aqua Galon', 5000),
+	('TCSTR002', '2016-10-29', 'CR', 'Order 1', 10000000),
+	('TCSTR003', '2016-10-29', 'DB', 'Beli Spidol', 1000);
 /*!40000 ALTER TABLE `tb_kas` ENABLE KEYS */;
 
 
@@ -41,8 +45,12 @@ CREATE TABLE IF NOT EXISTS `tb_konsumen` (
   PRIMARY KEY (`id_konsumen`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Dumping data for table techno_db.tb_konsumen: ~0 rows (approximately)
+-- Dumping data for table techno_db.tb_konsumen: ~4 rows (approximately)
 /*!40000 ALTER TABLE `tb_konsumen` DISABLE KEYS */;
+INSERT INTO `tb_konsumen` (`id_konsumen`, `tanggal_konsumen`, `nama`, `perusahaan`, `no_hp`, `alamat`) VALUES
+	('TCSKN001', '2016-10-27', 'Wildan Nugraha', 'Techno Consulting', '081563333307', 'KP. Selaawi III'),
+	('TCSKN002', '2016-10-27', 'Banu', 'PT. Sukses Selalu 2', '082213134440', 'Alamat Lengkap Disini !'),
+	('TCSKN003', '2016-10-13', 'asdfdsfs', 'sdfsf', 'sdfsds', 'asdfafa');
 /*!40000 ALTER TABLE `tb_konsumen` ENABLE KEYS */;
 
 

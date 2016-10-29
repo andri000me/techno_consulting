@@ -2,10 +2,10 @@
 <div id="content">
 		<div id="content-container">
 			<div id="content-header">
-				<h2> Input Data Konsumen</h2>
+				<h2> Input Data Kas</h2>
 			</div>
 			<div id="content-main">
-				<a href="<?php echo base_url() ?>konsumen" class="button">
+				<a href="<?php echo base_url() ?>kas" class="button">
 					<span class="button-icon">
 						<img src="<?php echo base_url("style/icon/back.png"); ?>" width="16px" height="16px">  
 					</span>
@@ -16,33 +16,34 @@
 				<br/>
 				<br/>
 				<div class="line-separator"></div><br/>
-				<form class="form-container" method="post" action="<?php echo base_url()?>konsumen/inputproses">
+				<form class="form-container" method="post" action="<?php echo base_url()?>kas/inputproses">
 					<div class="form-group">
-						<label for="id_konsumen" class="form-label">ID Konsumen</label>
-						<input type="text"  value="<?php echo $id_konsumen ?>" class="form-content" disabled="true" />
-						<input type="hidden" name="id_konsumen" value="<?php echo $id_konsumen ?>">
+						<label for="id_transaksi" class="form-label">ID Kas</label>
+						<input type="text"  class="form-content" disabled="true" value="<?php echo $id_kas ?>" />
+						<input type="hidden" name="id_kas" value="<?php echo $id_kas ?>">
 					</div>
 					<div class="form-group">
 						<label for="tanggal" class="form-label">Tanggal</label>
 						<input type="date" name="tanggal" placeholder="Id Konsumen" class="form-content"/>
 					</div>
 					<div class="form-group">
-						<label for="nama" class="form-label">Nama</label>
-						<input type="text" name="nama" placeholder="Nama" class="form-content"/>
+						<label for="jenis_transaksi" class="form-label">Jenis Transaksi</label>
+						<select name="jenis_transaksi" class="form-content">
+							<option>Pilih</option>
+							<option value="DB">Pengeluaran</option>
+							<option value="CR">Pemasukan</option>
+						</select>
 					</div>
 					<div class="form-group">
-						<label for="no_hp" class="form-label">No HP</label>
-						<input type="text" name="no_hp" placeholder="No Handphone" class="form-content"/>
+						<label for="keterangan" class="form-label">Keterangan</label>
+						<input type="text" name="keterangan" placeholder="Keterangan" class="long-text form-conten "/>
 					</div>
 					<div class="form-group">
-						<label for="perusahaan" class="form-label">Perusahaan</label>
-						<input type="text" name="perusahaan" placeholder="Perusahaan" class="form-content"/>
+						<label for="nominal" class="form-label">Nominal </label>
+						<input type="text" name="nominal" placeholder="Nominal" class="form-content"/>
 					</div>
 					<div class="form-group">
-						<label for="alamat" class="form-label">Alamat</label>
-						<textarea name="alamat" class="form-content"></textarea>
-					</div>
-					<div class="form-group">
+						<br/>
 						<div class="form-label"></div>
 						<button type="submit" class="button-save">
 							<span class="button-icon">

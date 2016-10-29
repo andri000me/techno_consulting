@@ -5,6 +5,19 @@
 				<h2>Data Konsumen</h2>
 			</div>
 			<div id="content-main">
+				<div class="form-group">
+					Nama :
+					<input type="text" name="nama" class="form-content">
+					<button type="submit" class="button">
+						<span class="button-icon">
+							<img src="<?php echo base_url("style/icon/search.png"); ?>" width="16px" height="16px">  
+						</span>
+						<div class="button-label">
+							
+						</div>
+					</button> 
+				</div>
+				<br/><div class="line-separator"></div><br/>
 				<a href="<?php echo base_url() ?>konsumen/inputkonsumen" class="button">
 					<span class="button-icon">
 						<img src="<?php echo base_url("style/icon/add.png"); ?>" width="16px" height="16px">  
@@ -13,9 +26,7 @@
 						Buat Baru
 					</div>
 				</a>
-				<br/>
-				<br/>
-				<div class="line-separator"></div><br/>
+				<br/><br/>
 				<table class="table-strip">
 					<tr>
 						<th>No</th>

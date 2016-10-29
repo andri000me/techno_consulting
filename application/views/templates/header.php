@@ -25,7 +25,7 @@
 							<li><a href="#">Proyek Selesai</a></li>
 						</ul>
 					</li>
-                    <li><a href="#">Kas</a>
+                    <li><a href="<?php echo base_url()?>kas">Kas</a>
                         <ul class="nav-dropdown">
 							<li><a href="#">Kas Masuk</a></li>
 							<li><a href="#">Kas Keluar</a></li>
