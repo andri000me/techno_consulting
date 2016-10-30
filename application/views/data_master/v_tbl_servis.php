@@ -33,7 +33,7 @@
 					</button> 
 				</div>
 				<br/><div class="line-separator"></div><br/>
-				<button id="inputModalBtn" class="button">
+				<button class="button" onclick="showInsertModal();">
 					<span class="button-icon">
 						<img src="<?php echo base_url("style/icon/add.png"); ?>" width="16px" height="16px">  
 					</span>
@@ -56,7 +56,7 @@
 						<td>ID0002</td>
 						<td>Aplikasi Desktop</td>
 						<td align="center">
-							<button id="updateModalBtn" class="button-cancel button-small">
+							<button id="updateBtn" onclick="showUpdateModal();" class="button-cancel button-small updateBtn">
 								<span class="button-icon">
 									<img src="<?php echo base_url("style/icon/edit.png"); ?>" width="14px" height="14px">  
 								</span>
@@ -65,7 +65,32 @@
 								</div>
 							</button>
 							|
-							<button id="deleteModalBtn" class="button-delete button-small">
+							<button onclick="showDeleteModal();" class="button-delete button-small deleteBtn">
+								<span class="button-icon">
+									<img src="<?php echo base_url("style/icon/delete.png"); ?>" width="14px" height="14px">  
+								</span>
+								<div class="button-label">
+									Hapus
+								</div>
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td align="center">2</td>
+						<td>ID0002</td>
+						<td>ID0002</td>
+						<td>Aplikasi Web</td>
+						<td align="center">
+							<button onclick="showUpdateModal();" class="button-cancel button-small updateBtn">
+								<span class="button-icon">
+									<img src="<?php echo base_url("style/icon/edit.png"); ?>" width="14px" height="14px">  
+								</span>
+								<div class="button-label">
+									Edit
+								</div>
+							</button>
+							|
+							<button onclick="showDeleteModal();" class="button-delete button-small deleteBtn">
 								<span class="button-icon">
 									<img src="<?php echo base_url("style/icon/delete.png"); ?>" width="14px" height="14px">  
 								</span>
@@ -126,22 +151,23 @@
 						<form>
 							<div class="form-group">
 								<label for="id_servis" class="form-label">Id Servis</label>
-								<input type="text" name="id_servis" class="form-content"/>
+								<input type="text" id="update_id_servis" name="update_id_servis" class="form-content"/>
 							</div>
 							<div class="form-group">
 								<label for="id_servis" class="form-label">Kategori Servis</label>
-								<select class="form-content">
+								<select id="update_id_ktgr_servis" name="update_id_ktgr_servis" class="form-content">
 									<option>Pilih</option>
+									<option>ID0002</option>
 								</select>
 							</div>
 							<div class="form-group">
 								<label for="id_servis" class="form-label">Keterangan</label>
-								<input type="text" name="id_servis" class="form-content long-text"/>
+								<input type="text" id="update_keterangan" name="update_keterangan" class="form-content long-text"/>
 							</div>
 							<div class="form-group">
 								<br/>
 								<div class="form-label"></div>
-								<button type="submit" class="button-save">
+								<button id="btn_update" type="submit" class="button-save">
 									<span class="button-icon">
 										<img src="<?php echo base_url("style/icon/save.png"); ?>" width="16px" height="16px">  
 									</span>
@@ -192,48 +218,32 @@
 		</div>
 	</div>
 	<script>
-		// Get the input modal
 		var inputmodal = document.getElementById('inputModal');
-		// Get the button that opens the modal
-		var inputbtn = document.getElementById("inputModalBtn");
 		// Get the <span> element that closes the modal
 		var span = document.getElementsByClassName("close")[0];
 		// When the user clicks the button, open the modal
-		inputbtn.onclick = function() {
+		function showInsertModal() {
 			inputmodal.style.display = "block";
 		}
 		// When the user clicks on <span> (x), close the modal
 		span.onclick = function() {
 			inputmodal.style.display = "none";
 		}
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function(event) {
-			if (event.target == inputmodal) {
-				inputmodal.style.display = "none";
-			}
-		}
 
 		//Get the Update Modal
 		var updatemodal = document.getElementById('updateModal');
-		var updatebtn = document.getElementById("updateModalBtn");
 		var span = document.getElementsByClassName("close")[1];
-		updatebtn.onclick = function() {
+		function showUpdateModal() {
 			updatemodal.style.display = "block";
 		}
 		span.onclick = function() {
 			updatemodal.style.display = "none";
 		}
-		window.onclick = function(event) {
-			if (event.target == updatemodal) {
-				updatemodal.style.display = "none";
-			}
-		}
 
 		//Get the Delete Modal
 		var deletemodal = document.getElementById('deleteModal');
-		var deletebtn = document.getElementById("deleteModalBtn");
 		var span = document.getElementsByClassName("close")[2];
-		deletebtn.onclick = function() {
+		function showDeleteModal() {
 			deletemodal.style.display = "block";
 		}
 		span.onclick = function() {
@@ -244,5 +254,20 @@
 				deletemodal.style.display = "none";
 			}
 		}
+		function msg(){
+			alert('test');
+		}
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".updateBtn").click(function(){
+				var id = $(this).closest('tr').children('td:eq(1)').text();
+				var kategori = $(this).closest('tr').children('td:eq(2)').text();
+				var keterangan = $(this).closest('tr').children('td:eq(3)').text();
+				$("#update_id_servis").val(id);
+				$("#update_id_ktgr_servis").val(kategori);
+				$("#update_keterangan").val(keterangan);
+			});
+		});
 	</script>
 <?php include "/../templates/footer.php"; ?>

@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="<?php echo base_url("style/css/custom.css"); ?>" />
+	
 	<script src="<?php echo base_url("style/js/jquery-3.1.1.min.js"); ?>" ></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
